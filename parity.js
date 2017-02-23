@@ -12,10 +12,12 @@ const postedTx = [
 
 module.exports = {
   accountsInfo: {
+    name: 'parity_accountsInfo',
     params: [],
     returns: 'accountsInfo'
   },
   chainStatus: {
+    name: 'parity_chainStatus',
     params: [],
     returns: [
       'object',
@@ -25,20 +27,24 @@ module.exports = {
     ]
   },
   generateSecretPhrase: {
+    name: 'parity_generateSecretPhrase',
     params: [],
     returns: 'string'
   },
   postTransaction: {
+    name: 'parity_postTransaction',
     params: [
       {format: postedTx}
     ],
     returns: 'hash'
   },
   netChain: {
+    name: 'parity_netChain',
     params: [],
     returns: 'string'
   },
   netPeers: {
+    name: 'parity_netPeers',
     params: [],
     returns: [
       'object',
@@ -51,20 +57,24 @@ module.exports = {
     ]
   },
   netPort: {
+    name: 'parity_netPort',
     params: [],
     returns: 'number'
   },
   netNonce: {
+    name: 'parity_netNonce',
     params: [
       {format: 'address'}
     ],
     returns: 'number'
   },
   registryAddress: {
+    name: 'parity_registryAddress',
     params: [],
     returns: 'address'
   },
   rpcSettings: {
+    name: 'parity_rpcSettings',
     params: [],
     returns: [
       'object',
@@ -76,10 +86,12 @@ module.exports = {
     ]
   },
   enode: {
+    name: 'parity_enode',
     params: [],
     returns: 'string'
   },
   mode: {
+    name: 'parity_mode',
     params: [],
     returns: 'string'
   }

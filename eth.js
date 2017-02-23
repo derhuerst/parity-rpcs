@@ -85,14 +85,17 @@ const receipt = [
 
 module.exports = {
   accounts: {
+    name: 'eth_accounts',
     params: [],
     returns: ['array', 'address']
   },
   blockNumber: {
+    name: 'eth_blockNumber',
     params: [],
     returns: 'number'
   },
   call: {
+    name: 'eth_call',
     params: [
       {format: 'call'},
       {format: 'blockNr', optional: true}
@@ -100,28 +103,33 @@ module.exports = {
     returns: 'data'
   },
   coinbase: {
+    name: 'eth_coinbase',
     params: [],
     returns: 'address'
   },
   compileSerpent: {
+    name: 'eth_compileSerpent',
     params: [
       {format: 'string'}
     ],
     returns: 'data'
   },
   compileSolidity: {
+    name: 'eth_compileSolidity',
     params: [
       {format: 'string'}
     ],
     returns: 'data'
   },
   compileLLL: {
+    name: 'eth_compileLLL',
     params: [
       {format: 'string'}
     ],
     returns: 'data'
   },
   estimateGas: {
+    name: 'eth_estimateGas',
     params: [
       {format: 'call'},
       {format: 'blockNr', optional: true}
@@ -129,10 +137,12 @@ module.exports = {
     returns: 'number'
   },
   gasPrice: {
+    name: 'eth_gasPrice',
     params: [],
     returns: 'number'
   },
   getBalance: {
+    name: 'eth_getBalance',
     params: [
       {format: 'address'},
       {format: 'blockNr', optional: true}
@@ -140,6 +150,7 @@ module.exports = {
     returns: 'number'
   },
   getBlockByHash: {
+    name: 'eth_getBlockByHash',
     params: [
       {format: 'hash'},
       {format: 'boolean'}
@@ -147,6 +158,7 @@ module.exports = {
     returns: block
   },
   getBlockByNumber: {
+    name: 'eth_getBlockByNumber',
     params: [
       {format: 'blockNr'},
       {format: 'boolean'}
@@ -154,18 +166,21 @@ module.exports = {
     returns: block
   },
   getBlockTransactionCountByHash: {
+    name: 'eth_getBlockTransactionCountByHash',
     params: [
       {format: 'hash'}
     ],
     returns: 'number'
   },
   getBlockTransactionCountByNumber: {
+    name: 'eth_getBlockTransactionCountByNumber',
     params: [
       {format: 'blockNr'}
     ],
     returns: 'number'
   },
   getCode: {
+    name: 'eth_getCode',
     params: [
       {format: 'address'},
       {format: 'blockNr'}
@@ -173,28 +188,33 @@ module.exports = {
     returns: 'data'
   },
   getCompilers: {
+    name: 'eth_getCompilers',
     params: [],
     returns: ['array', 'string']
   },
   getFilterChanges: {
+    name: 'eth_getFilterChanges',
     params: [
       {format: 'number'}
     ],
     returns: ['array', log]
   },
   getFilterLogs: {
+    name: 'eth_getFilterLogs',
     params: [
       {format: 'number'}
     ],
     returns: ['array', log]
   },
   getLogs: {
+    name: 'eth_getLogs',
     params: [
       {format: filter}
     ],
     returns: ['array', log]
   },
   getStorageAt: {
+    name: 'eth_getStorageAt',
     params: [
       {format: 'address'},
       {format: 'number'},
@@ -203,12 +223,14 @@ module.exports = {
     returns: 'data'
   },
   getTransactionByHash: {
+    name: 'eth_getTransactionByHash',
     params: [
       {format: 'hash'}
     ],
     returns: signedTx
   },
   getTransactionByBlockHashAndIndex: {
+    name: 'eth_getTransactionByBlockHashAndIndex',
     params: [
       {format: 'hash'},
       {format: 'number'}
@@ -216,6 +238,7 @@ module.exports = {
     returns: signedTx
   },
   getTransactionByBlockNumberAndIndex: {
+    name: 'eth_getTransactionByBlockNumberAndIndex',
     params: [
       {format: 'blockNr'},
       {format: 'number'}
@@ -223,6 +246,7 @@ module.exports = {
     returns: signedTx
   },
   getTransactionCount: {
+    name: 'eth_getTransactionCount',
     params: [
       {format: 'address'},
       {format: 'blockNr', optional: true}
@@ -230,12 +254,14 @@ module.exports = {
     returns: 'number'
   },
   getTransactionReceipt: {
+    name: 'eth_getTransactionReceipt',
     params: [
       {format: 'hash'}
     ],
     returns: receipt
   },
   getUncleByBlockHashAndIndex: {
+    name: 'eth_getUncleByBlockHashAndIndex',
     params: [
       {format: 'hash'},
       {format: 'number'}
@@ -243,6 +269,7 @@ module.exports = {
     returns: block
   },
   getUncleByBlockNumberAndIndex: {
+    name: 'eth_getUncleByBlockHashAndIndex',
     params: [
       {format: 'blockNr'},
       {format: 'number'}
@@ -250,60 +277,72 @@ module.exports = {
     returns: block
   },
   getUncleCountByBlockHash: {
+    name: 'eth_getUncleCountByBlockHash',
     params: [
       {format: 'hash'}
     ],
     returns: 'number'
   },
   getUncleCountByBlockNumber: {
+    name: 'eth_getUncleCountByBlockNumber',
     params: [
       {format: 'blockNr'}
     ],
     returns: 'number'
   },
   getWork: {
+    name: 'eth_getWork',
     params: [],
     returns: 'work'
   },
   hashrate: {
+    name: 'eth_hashrate',
     params: [],
     returns: 'number'
   },
   mining: {
+    name: 'eth_mining',
     params: [],
     returns: 'boolean'
   },
   newBlockFilter: {
+    name: 'eth_newBlockFilter',
     params: [],
     returns: 'number'
   },
   newFilter: {
+    name: 'eth_newFilter',
     params: [
       {format: filter}
     ],
     returns: 'number'
   },
   newPendingTransactionFilter: {
+    name: 'eth_newPendingTransactionFilter',
     params: [],
     returns: 'number'
   },
   protocolVersion: {
+    name: 'eth_protocolVersion',
     params: [],
     returns: 'number'
   },
   sendRawTransaction: {
+    name: 'eth_sendRawTransaction',
     params: [
       {format: 'data'}
     ],
     returns: 'hash'
   },
   sendTransaction: {
+    name: 'eth_sendTransaction',
     params: [
       {format: newTx}
     ],
     returns: 'hash'
   },
   sign: {
+    name: 'eth_sign',
     params: [
       {format: 'address'},
       {format: 'data'}
@@ -311,6 +350,7 @@ module.exports = {
     returns: 'data'
   },
   signTransaction: {
+    name: 'eth_signTransaction',
     params: [
       {format: newTx}
     ],
@@ -323,6 +363,7 @@ module.exports = {
     ]
   },
   submitWork: {
+    name: 'eth_submitWork',
     params: [
       {format: 'data'},
       {format: 'data'},
@@ -331,6 +372,7 @@ module.exports = {
     returns: 'boolean'
   },
   submitHashrate: {
+    name: 'eth_submitHashrate',
     params: [
       {format: 'number'},
       {format: 'data'}
@@ -338,10 +380,12 @@ module.exports = {
     returns: 'boolean'
   },
   syncing: {
+    name: 'eth_syncing',
     params: [],
     returns: 'syncing'
   },
   uninstallFilter: {
+    name: 'eth_uninstallFilter',
     params: [
       {format: 'number'}
     ],
