@@ -2,6 +2,18 @@
 
 const {newTx} = require('./shared')
 
+const call = [
+  'object',
+  {
+    from: 'address',
+    to: 'address',
+    gas: 'number',
+    gasPrice: 'number',
+    value: 'number',
+    data: 'data'
+  }
+]
+
 const block = [
   'object',
   {
@@ -97,7 +109,7 @@ module.exports = {
   call: {
     name: 'eth_call',
     params: [
-      {format: 'call'},
+      {format: call},
       {format: 'blockNr', optional: true}
     ],
     returns: 'data'
@@ -131,7 +143,7 @@ module.exports = {
   estimateGas: {
     name: 'eth_estimateGas',
     params: [
-      {format: 'call'},
+      {format: call},
       {format: 'blockNr', optional: true}
     ],
     returns: 'number'

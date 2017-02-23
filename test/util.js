@@ -8,7 +8,6 @@ const atomic = [
 	'address',
 	'hash',
 	'blockNr',
-	'call', // todo
 	'work', // todo
 	'syncing', // todo
 	'accountsInfo' // todo
