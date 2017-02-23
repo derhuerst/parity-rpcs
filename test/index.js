@@ -9,21 +9,21 @@ const personal = require('../personal')
 const parity = require('../parity')
 
 test('net', (t) => {
-	assertValidSpec(t, 'net', net)
-	t.end()
+  assertValidSpec(t, 'net', net)
+  t.end()
 })
 
 test('eth', (t) => {
-	assertValidSpec(t, 'eth', eth)
-	t.end()
+  assertValidSpec(t, 'eth', eth)
+  t.end()
 })
 
 test('personal', (t) => {
-	assertValidSpec(t, 'personal', personal)
-	t.end()
+  assertValidSpec(t, 'personal', personal)
+  t.end()
 })
 
 test('parity', (t) => {
-	assertValidSpec(t, 'parity', parity)
-	t.end()
+  assertValidSpec(t, 'parity', parity)
+  t.end()
 })

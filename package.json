@@ -1,5 +1,4 @@
 {
-  "private": true,
   "name": "parity-rpcs",
   "description": "A machine-readable list of the Parity JSON RPCs.",
   "version": "0.1.0",
