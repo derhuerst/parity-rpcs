@@ -1,7 +1,7 @@
 'use strict'
 
 const test = require('tape')
-const {assertValidType, assertValidSpec} = require('./util')
+const {assertValidSpec} = require('./util')
 
 const net = require('../net')
 const eth = require('../eth')

@@ -54,7 +54,7 @@ const assertValidSpec = (test, name, spec) => {
     const definition = spec[method]
 
     if (!Array.isArray(definition.params)) {
-      t.fail(`${name}.${method}.params must be an array`)
+      test.fail(`${name}.${method}.params must be an array`)
       continue
     }
 
@@ -62,13 +62,13 @@ const assertValidSpec = (test, name, spec) => {
       const name2 = `${name}.${method}.params[${i}]`
 
       if (typeof param !== 'object' || !param) {
-        return t.fail(`param ${i} of ${method} is not an object`)
+        return test.fail(`param ${i} of ${method} is not an object`)
       }
 
       assertValidType(test, `${name2}.format`, param.format)
 
       if ('optional' in param && typeof param.optional !== 'boolean') {
-        return t.fail(`${name2}.optional is not a boolean`)
+        return test.fail(`${name2}.optional is not a boolean`)
       }
     })
 

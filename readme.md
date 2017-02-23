@@ -15,8 +15,19 @@
 npm install --save parity-rpcs@derhuerst/parity-rpcs
 ```
 
-## Usage
+## Types
 
-```js
-// todo
-```
+type | JavaScript values/example
+-----|--------------------------
+`'boolean'` | `true`/`false`
+`'number'` | `0`/`-100.32`
+`'string'` | `'foo bar baz'`
+`'data'` | [`Buffer`](https://nodejs.org/api/buffer.html)
+`['array', 'boolean']` | `[true, false]`
+`['object', {foo: 'boolean'}]` | `{foo: true}`
+`'address'` | `'0x5340e74cda65bc0de4d45908fc288cf99fdb2f9a'`
+`'hash'` | `'0xc5f02e4fc4d9c5885cca4e652937ff4701b23fa10d25b42b327c111c0ef88e37'`
+`'blockNr'` | `123456`/`'latest'`/`'earliest'`/`'pending'`
+`'work'` | *todo*
+`'syncing'` | *todo*
+`'accountsInfo'` | *todo*
