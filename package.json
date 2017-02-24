@@ -2,6 +2,10 @@
   "name": "parity-rpcs",
   "description": "A machine-readable list of the Parity JSON RPCs.",
   "version": "0.1.0",
+  "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
   "keywords": [
     "ethereum",
     "parity",

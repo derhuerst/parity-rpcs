@@ -3,10 +3,10 @@
 const test = require('tape')
 const {assertValidSpec} = require('./util')
 
-const net = require('../net')
-const eth = require('../eth')
-const personal = require('../personal')
-const parity = require('../parity')
+const net = require('../lib/net')
+const eth = require('../lib/eth')
+const personal = require('../lib/personal')
+const parity = require('../lib/parity')
 
 test('net', (t) => {
   assertValidSpec(t, 'net', net)
