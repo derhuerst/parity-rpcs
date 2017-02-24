@@ -1,13 +1,16 @@
 # [Parity](https://ethcore.io/parity.html) JSON RPCs
 
-**A machine-readable list of the Parity JSON RPCs.**
+**A machine-readable list of the [Parity](https://ethcore.io) [JSON RPCs](https://github.com/ethcore/parity/wiki/JSONRPC).**
 
-[![Join the chat at https://gitter.im/ethcore/parity][gitter-image]][gitter-url] [![GPLv3][license-image]][license-url]
+[![npm version](https://img.shields.io/npm/v/parity-client.svg)](https://www.npmjs.com/package/parity-client)
+[![build status](https://img.shields.io/travis/derhuerst/parity-client.svg)](https://travis-ci.org/derhuerst/parity-client)
+![GPL-licensed](https://img.shields.io/github/license/derhuerst/parity-client.svg)
+[![chat on gitter](https://badges.gitter.im/derhuerst.svg)](https://gitter.im/derhuerst)
 
-[gitter-image]: https://badges.gitter.im/Join%20Chat.svg
-[gitter-url]: https://gitter.im/ethcore/parity
-[license-image]: https://img.shields.io/badge/license-GPL%20v3-green.svg
-[license-url]: https://www.gnu.org/licenses/gpl-3.0.en.html
+This module contains the definitions of most RPCs, in the most minimal required for making calls. I took them [from the Parity source code](https://github.com/ethcore/parity/tree/72998d3ce333dcbdd4848a3a6e56e2b7d9db30d7/js/src/jsonrpc/interfaces). **This module is intended to be used by libraries like [`parity-client`](https://github.com/derhuerst/parity-client).** Things still missing:
+
+- some of the `parity` RPCs, all of `personal` and `signer`
+- an automated setup to generate this module, as having the definitions twice is dangerous
 
 ## Installation
 
@@ -31,3 +34,52 @@ type | JavaScript values/example
 `'work'` | *todo*
 `'syncing'` | *todo*
 `'accountsInfo'` | *todo*
+
+## Usage
+
+```js
+const eth = require('parity-rpcs/eth')
+// or
+const {eth, personal} = require('parity-rpcs')
+
+console.log(eth.getBlockByNumber)
+```
+
+```js
+{
+	name: 'eth_getBlockByNumber',
+	params: [
+		{format: 'blockNr'},
+		{format: 'boolean'}
+	],
+	returns: [
+		'object',
+		{
+			number: 'number',
+			hash: 'hash',
+			parentHash: 'hash',
+			nonce: 'data',
+			sha3Uncles: 'data',
+			logsBloom: 'data',
+			transactionsRoot: 'data',
+			stateRoot: 'data',
+			receiptRoot: 'data',
+			miner: 'address',
+			difficulty: 'number',
+			totalDifficulty: 'number',
+			extraData: 'data',
+			size: 'number',
+			gasLimit: 'number',
+			gasUsed: 'number',
+			timestamp: 'number',
+			transactions: ['array', 'data'],
+			uncles: ['array', 'hash']
+		}
+	]
+}
+```
+
+
+## Contributing
+
+If you **have a question**, **found a bug** or want to **propose a feature**, go to [the issues page](https://github.com/derhuerst/parity-rpcs/issues).
