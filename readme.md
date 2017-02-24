@@ -2,9 +2,9 @@
 
 **A machine-readable list of the [Parity](https://ethcore.io) [JSON RPCs](https://github.com/ethcore/parity/wiki/JSONRPC).**
 
-[![npm version](https://img.shields.io/npm/v/parity-client.svg)](https://www.npmjs.com/package/parity-client)
-[![build status](https://img.shields.io/travis/derhuerst/parity-client.svg)](https://travis-ci.org/derhuerst/parity-client)
-![GPL-licensed](https://img.shields.io/github/license/derhuerst/parity-client.svg)
+[![npm version](https://img.shields.io/npm/v/parity-rpcs.svg)](https://www.npmjs.com/package/parity-rpcs)
+[![build status](https://img.shields.io/travis/derhuerst/parity-rpcs.svg)](https://travis-ci.org/derhuerst/parity-rpcs)
+![GPL-licensed](https://img.shields.io/github/license/derhuerst/parity-rpcs.svg)
 [![chat on gitter](https://badges.gitter.im/derhuerst.svg)](https://gitter.im/derhuerst)
 
 This module contains the definitions of most RPCs, in the most minimal required for making calls. I took them [from the Parity source code](https://github.com/ethcore/parity/tree/72998d3ce333dcbdd4848a3a6e56e2b7d9db30d7/js/src/jsonrpc/interfaces). **This module is intended to be used by libraries like [`parity-client`](https://github.com/derhuerst/parity-client).** Things still missing:
@@ -15,7 +15,7 @@ This module contains the definitions of most RPCs, in the most minimal required 
 ## Installation
 
 ```shell
-npm install --save parity-rpcs@derhuerst/parity-rpcs
+npm install --save parity-rpcs
 ```
 
 ## Types
