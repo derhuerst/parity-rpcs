@@ -1,6 +1,8 @@
 # [Parity](https://ethcore.io/parity.html) JSON RPCs
 
-**A machine-readable list of the [Parity](https://ethcore.io) [JSON RPCs](https://github.com/ethcore/parity/wiki/JSONRPC).**
+**Outdated, use repos from [@Parity-JS](https://github.com/Parity-JS).**
+
+A machine-readable list of the [Parity](https://ethcore.io) [JSON RPCs](https://github.com/ethcore/parity/wiki/JSONRPC).
 
 [![npm version](https://img.shields.io/npm/v/parity-rpcs.svg)](https://www.npmjs.com/package/parity-rpcs)
 [![build status](https://img.shields.io/travis/derhuerst/parity-rpcs.svg)](https://travis-ci.org/derhuerst/parity-rpcs)
